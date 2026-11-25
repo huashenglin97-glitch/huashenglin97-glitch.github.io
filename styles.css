@@ -141,6 +141,26 @@ p {
   margin-top: 10px;
 }
 
+.proposal-figure {
+  margin: 18px 0 0;
+}
+
+.proposal-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.proposal-figure figcaption {
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 /* CV Work Items */
 .cv-item {
   margin-bottom: 28px;

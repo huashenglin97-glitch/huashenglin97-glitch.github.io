@@ -76,19 +76,104 @@
           <h3 data-en="Offline Regulatory &amp; Structural Design Brain" data-zh="离线规范与结构设计智能">Offline Regulatory &amp; Structural Design Brain</h3>
           <span class="item-tag" data-en="Ongoing" data-zh="进行中">Ongoing</span>
         </div>
-        <p data-en="Developing an offline engineering assistant that navigates building codes step by step, delegates calculations and structural checks to dedicated tools, and enforces explicit verification before producing cited answers or frame design proposals."
-           data-zh="构建完全离线运行的工程规范智能体：按步骤查阅真实建筑规范、调用专业计算与结构校核工具，并在输出前强制核验每一项条款出处与数值，形成可审计的工程结论与框架设计方案。">
-          Developing an offline engineering assistant that navigates building codes step by step, delegates calculations and structural checks to dedicated tools, and enforces explicit verification before producing cited answers or frame design proposals.
+        <p data-en="Our vision is to use large language models not as black-box answer generators, but as an auditable engineering orchestrator — reading real building codes, delegating mechanics and math to deterministic solvers, and iterating under a strict verification guard until a design is ready for engineer sign-off."
+           data-zh="我们的愿景不是让大语言模型充当“黑盒答疑器”，而是将其定位为可审计的工程编排中枢：主动查阅真实建筑规范、将力学与计算任务交给确定性专业工具，并在严格核验门控下闭环迭代，最终交付可供工程师直接审阅签字的设计方案。">
+          Our vision is to use large language models not as black-box answer generators, but as an auditable engineering orchestrator — reading real building codes, delegating mechanics and math to deterministic solvers, and iterating under a strict verification guard until a design is ready for engineer sign-off.
         </p>
-        <svg class="flow-strip" viewBox="0 0 680 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regulatory brain conceptual flow">
-          <text x="0" y="21" fill="#374151" font-size="12" data-en="Building Codes" data-zh="真实建筑规范">Building Codes</text>
-          <text x="108" y="21" fill="#9CA3AF" font-size="12">→</text>
-          <text x="132" y="21" fill="#374151" font-size="12" data-en="Clause Lookup &amp; Tool Computation" data-zh="分步查条款与工具计算">Clause Lookup &amp; Tool Computation</text>
-          <text x="348" y="21" fill="#9CA3AF" font-size="12">→</text>
-          <text x="372" y="21" fill="#374151" font-size="12" data-en="Verification Guard" data-zh="核验把关">Verification Guard</text>
-          <text x="498" y="21" fill="#9CA3AF" font-size="12">→</text>
-          <text x="522" y="21" fill="#111111" font-size="12" font-weight="600" data-en="Auditable Design" data-zh="可审计交付">Auditable Design</text>
-        </svg>
+
+        <figure class="proposal-figure">
+          <svg class="proposal-svg" viewBox="0 0 718 472" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layered vision architecture showing how LLMs orchestrate verifiable structural design">
+            <defs>
+              <marker id="p-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#374151" />
+              </marker>
+              <marker id="p-arr-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#6B7280" />
+              </marker>
+            </defs>
+
+            <!-- Layer 01: Intent & Codes -->
+            <rect x="14" y="14" width="574" height="90" rx="6" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1" />
+            <text x="28" y="34" fill="#6B7280" font-size="10" font-weight="600" letter-spacing="0.08em" data-en="LAYER 01 · ENGINEERING INTENT &amp; LIVING CODES" data-zh="图层 01 · 工程需求与动态规范库">LAYER 01 · ENGINEERING INTENT &amp; LIVING CODES</text>
+
+            <rect x="28" y="44" width="266" height="48" rx="4" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" />
+            <text x="42" y="64" fill="#111111" font-size="12" font-weight="600" data-en="Project Brief &amp; Site Constraints" data-zh="项目需求与物理边界条件">Project Brief &amp; Site Constraints</text>
+            <text x="42" y="81" fill="#6B7280" font-size="10.5" data-en="Geometry, loads, safety &amp; material goals" data-zh="建筑几何、荷载工况、安全与经济目标">Geometry, loads, safety &amp; material goals</text>
+
+            <rect x="308" y="44" width="266" height="48" rx="4" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" />
+            <text x="322" y="64" fill="#111111" font-size="12" font-weight="600" data-en="Governing Building Codes" data-zh="真实建筑规范与行业标准">Governing Building Codes</text>
+            <text x="322" y="81" fill="#6B7280" font-size="10.5" data-en="Structured clauses, tables &amp; edition updates" data-zh="条款、附表与附注（随规范换版更新）">Structured clauses, tables &amp; edition updates</text>
+
+            <!-- Arrow 1 -> 2 -->
+            <line x1="301" y1="104" x2="301" y2="128" stroke="#374151" stroke-width="1.2" marker-end="url(#p-arr)" />
+
+            <!-- Layer 02: Core LLM Orchestrator -->
+            <rect x="14" y="132" width="574" height="114" rx="6" fill="#F8FAFC" stroke="#111111" stroke-width="1.35" />
+            <rect x="28" y="144" width="246" height="20" rx="3" fill="#111111" />
+            <text x="38" y="158" fill="#FFFFFF" font-size="9.5" font-weight="600" letter-spacing="0.06em" data-en="LAYER 02 · LLM AS DESIGN ORCHESTRATOR" data-zh="图层 02 · 大语言模型：设计推理与编排中枢">LAYER 02 · LLM AS DESIGN ORCHESTRATOR</text>
+            <text x="574" y="158" text-anchor="end" fill="#4B5563" font-size="10.5" data-en="Reasons &amp; coordinates — never guesses numbers" data-zh="负责推理与调度，绝不凭记忆编造数值">Reasons &amp; coordinates — never guesses numbers</text>
+
+            <rect x="28" y="174" width="174" height="58" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+            <text x="40" y="194" fill="#111111" font-size="11.5" font-weight="600" data-en="1. Interpret &amp; Navigate" data-zh="1. 解读与查规范">1. Interpret &amp; Navigate</text>
+            <text x="40" y="211" fill="#6B7280" font-size="10.5" data-en="Locate governing clauses" data-zh="精准定位适用条款与">Locate governing clauses</text>
+            <text x="40" y="224" fill="#6B7280" font-size="10.5" data-en="and design requirements" data-zh="关键设计约束条件">and design requirements</text>
+
+            <rect x="214" y="174" width="174" height="58" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+            <text x="226" y="194" fill="#111111" font-size="11.5" font-weight="600" data-en="2. Formulate &amp; Delegate" data-zh="2. 建模与调工具">2. Formulate &amp; Delegate</text>
+            <text x="226" y="211" fill="#6B7280" font-size="10.5" data-en="Dispatch calculations &amp;" data-zh="将公式计算与结构分析">Dispatch calculations &amp;</text>
+            <text x="226" y="224" fill="#6B7280" font-size="10.5" data-en="structural checks to tools" data-zh="分派给专业求解器">structural checks to tools</text>
+
+            <rect x="400" y="174" width="174" height="58" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" />
+            <text x="412" y="194" fill="#111111" font-size="11.5" font-weight="600" data-en="3. Synthesize &amp; Refine" data-zh="3. 综合与迭代优化">3. Synthesize &amp; Refine</text>
+            <text x="412" y="211" fill="#6B7280" font-size="10.5" data-en="Revise candidate designs" data-zh="结合校核反馈权衡安全">Revise candidate designs</text>
+            <text x="412" y="224" fill="#6B7280" font-size="10.5" data-en="for safety &amp; efficiency" data-zh="冗余与材料经济性">for safety &amp; efficiency</text>
+
+            <!-- Bidirectional arrows 2 <-> 3 -->
+            <line x1="210" y1="246" x2="210" y2="274" stroke="#374151" stroke-width="1.2" marker-end="url(#p-arr)" />
+            <text x="198" y="264" text-anchor="end" fill="#6B7280" font-size="10" data-en="Design queries" data-zh="发起计算与校核">Design queries</text>
+
+            <line x1="392" y1="278" x2="392" y2="250" stroke="#374151" stroke-width="1.2" marker-end="url(#p-arr)" />
+            <text x="404" y="264" text-anchor="start" fill="#6B7280" font-size="10" data-en="Verified feedback" data-zh="返回实算与核验结果">Verified feedback</text>
+
+            <!-- Layer 03: Physics & Verification -->
+            <rect x="14" y="278" width="574" height="86" rx="6" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1" />
+            <text x="28" y="298" fill="#6B7280" font-size="10" font-weight="600" letter-spacing="0.08em" data-en="LAYER 03 · DETERMINISTIC PHYSICS &amp; VERIFICATION GUARD" data-zh="图层 03 · 确定性物理求解与可信核验层">LAYER 03 · DETERMINISTIC PHYSICS &amp; VERIFICATION GUARD</text>
+
+            <rect x="28" y="308" width="266" height="44" rx="4" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" />
+            <text x="42" y="326" fill="#111111" font-size="12" font-weight="600" data-en="Engineering Solvers &amp; Mechanics" data-zh="确定性工程计算与力学分析">Engineering Solvers &amp; Mechanics</text>
+            <text x="42" y="342" fill="#6B7280" font-size="10.5" data-en="Exact code math, frame analysis &amp; member checks" data-zh="规范计算、框架受力分析与构件承载力校核">Exact code math, frame analysis &amp; member checks</text>
+
+            <rect x="308" y="308" width="266" height="44" rx="4" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" />
+            <text x="322" y="326" fill="#111111" font-size="12" font-weight="600" data-en="Audit &amp; Traceability Guard" data-zh="强制核验与溯源守卫">Audit &amp; Traceability Guard</text>
+            <text x="322" y="342" fill="#6B7280" font-size="10.5" data-en="Checks clause read, tool-computed values &amp; provenance" data-zh="核查原文实读、数值工具实算与参数出处">Checks clause read, tool-computed values &amp; provenance</text>
+
+            <!-- Arrow 3 -> 4 -->
+            <line x1="301" y1="364" x2="301" y2="388" stroke="#374151" stroke-width="1.2" marker-end="url(#p-arr)" />
+            <text x="313" y="380" fill="#6B7280" font-size="10" data-en="Passed all checks" data-zh="通过全部核验">Passed all checks</text>
+
+            <!-- Layer 04: Deliverables -->
+            <rect x="14" y="392" width="574" height="68" rx="6" fill="#FFFFFF" stroke="#111111" stroke-width="1" />
+            <text x="28" y="411" fill="#111111" font-size="10" font-weight="600" letter-spacing="0.08em" data-en="LAYER 04 · ENGINEER-IN-THE-LOOP DELIVERABLES (OFFLINE)" data-zh="图层 04 · 面向工程师的可审计交付（完全离线）">LAYER 04 · ENGINEER-IN-THE-LOOP DELIVERABLES (OFFLINE)</text>
+
+            <text x="28" y="434" fill="#111111" font-size="12" font-weight="600" data-en="Checked Structural Design Proposals" data-zh="可落地结构设计方案">Checked Structural Design Proposals</text>
+            <text x="28" y="449" fill="#6B7280" font-size="10.5" data-en="Member sizing, material mass &amp; pass/fail status" data-zh="梁柱截面选型、用钢量与校核状态">Member sizing, material mass &amp; pass/fail status</text>
+
+            <line x1="301" y1="420" x2="301" y2="450" stroke="#E5E7EB" stroke-width="1" />
+
+            <text x="318" y="434" fill="#111111" font-size="12" font-weight="600" data-en="Clause-by-Clause Audit Trail" data-zh="逐条可追溯计算与合规底稿">Clause-by-Clause Audit Trail</text>
+            <text x="318" y="449" fill="#6B7280" font-size="10.5" data-en="Every number linked to code text for human sign-off" data-zh="每个结论可回溯至规范原文，供工程师审阅签字">Every number linked to code text for human sign-off</text>
+
+            <!-- Right-side Closed-Loop Iteration Rail -->
+            <path d="M 588 322 L 622 322 Q 630 322 630 314 L 630 198 Q 630 190 622 190 L 594 190" stroke="#6B7280" stroke-width="1.2" stroke-dasharray="4 3" fill="none" marker-end="url(#p-arr-muted)" />
+            <text x="642" y="246" fill="#4B5563" font-size="10.5" font-weight="600" data-en="Closed-Loop" data-zh="闭环迭代">Closed-Loop</text>
+            <text x="642" y="261" fill="#6B7280" font-size="10" data-en="Iterate if" data-zh="核验未通过">Iterate if</text>
+            <text x="642" y="274" fill="#6B7280" font-size="10" data-en="check fails" data-zh="自动修正">check fails</text>
+          </svg>
+          <figcaption data-en="Proposal vision: layering LLM reasoning between living building codes and deterministic physics so every design output is verifiable and ready for human sign-off."
+                      data-zh="愿景架构图：将大语言模型置于真实规范库与确定性物理求解/核验层之间，使每一项设计输出都可追溯、可复核、可供工程师签字确认。">
+            Proposal vision: layering LLM reasoning between living building codes and deterministic physics so every design output is verifiable and ready for human sign-off.
+          </figcaption>
+        </figure>
       </article>
 
       <!-- Item 2: SHM with real video -->
