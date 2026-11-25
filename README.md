@@ -1,9 +1,9 @@
-# Engineering Intelligence & Structural Vision
+# Huasheng Lin — Research Overview
 
-Live GitHub Pages homepage: **https://huashenglin97-glitch.github.io/**
+Live site: **https://huashenglin97-glitch.github.io/**
 
-A clean, bilingual (English / 中文) visual showcase of our research vision — intentionally focused on **illustrations, mission, and real-world engineering demonstrations** without low-level technical implementation details.
+A minimal, low-key bilingual (`EN` / `中文`) overview of our ongoing work across the building lifecycle — focusing on vision and conceptual illustrations without implementation details:
 
-## Featured Work
-1. **Offline Regulatory & Structural Design Brain** — From building codes to verified, auditable engineering answers and structural designs.
-2. **Vision-Based Structural Health Monitoring (SHM)** — 3D multi-view tracking of large shake table testing with synchronized multi-story displacement (`X, Y, Z`) and torsion (`rz`) visualization.
+1. **Offline Regulatory & Structural Design Brain** — Auditable, code-grounded engineering reasoning and structural checks.
+2. **Vision-Based Structural Health Monitoring (SHM)** — 3D multi-view tracking of large shake table testing with synchronized floor displacement (`X, Y, Z`) and torsion (`rz`).
+3. **Autonomous Robotic Construction & Site Safety** — Obstacle-aware full-scale crane lifting, visual progress updates, and active worker-safety pausing (*ACDSA 2026*).
