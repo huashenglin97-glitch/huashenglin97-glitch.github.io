@@ -80,9 +80,23 @@ h1 {
 }
 
 .email-line {
-  margin-top: 2px;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-email,
+.links a,
+.hero nav a {
   font-size: 13.5px;
-  color: var(--soft);
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(36, 84, 129, 0.35);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: color 0.16s ease, text-decoration-color 0.16s ease, transform 0.12s ease;
 }
 
 .copy-email {
@@ -92,22 +106,56 @@ h1 {
   background: transparent;
   padding: 0;
   margin: 0;
-  font: inherit;
-  color: var(--soft);
+  font-family: inherit;
+  line-height: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   cursor: pointer;
 }
 
-.copy-email:hover {
-  color: var(--blue);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.copy-email:active {
+  transform: scale(0.98);
+}
+
+.copy-email:hover,
+.links a:hover,
+.hero nav a:hover {
+  color: #152e49;
+  text-decoration-color: #152e49;
+}
+
+.copy-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.72;
+  transition: opacity 0.16s ease, transform 0.2s ease;
+}
+
+.copy-email:hover .copy-icon {
+  opacity: 1;
+}
+
+.copy-email.copied .copy-icon {
+  color: #1e7a50;
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .copy-status {
-  margin-left: 8px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--blue);
+  color: #1e7a50;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.copy-status.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .links {
@@ -116,7 +164,6 @@ h1 {
   justify-content: flex-end;
   gap: 6px 14px;
   margin-top: 4px;
-  font-size: 13.5px;
 }
 
 .hero nav {
@@ -126,8 +173,6 @@ h1 {
   margin-top: 18px;
   padding-top: 12px;
   border-top: 1px solid #f3f4f6;
-  font-size: 13.5px;
-  font-weight: 500;
 }
 
 a {
