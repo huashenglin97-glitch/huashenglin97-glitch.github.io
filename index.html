@@ -3,189 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Huasheng Lin — Engineering Intelligence, SHM &amp; Autonomous Construction</title>
-  <meta name="description" content="Research overview and conceptual illustrations on verifiable regulatory intelligence, vision-based structural health monitoring, and autonomous robotic construction." />
+  <title>Huasheng Lin</title>
+  <meta name="description" content="Huasheng Lin — Department of Civil Engineering, The University of British Columbia. Research in verifiable engineering intelligence, structural health monitoring, and autonomous construction." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="brand">
-        <span data-en="Huasheng Lin" data-zh="林华盛 · Huasheng Lin">Huasheng Lin</span>
-      </a>
-
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#codes" data-en="01 Codes" data-zh="01 规范智能">01 Codes</a>
-        <a href="#shm" data-en="02 SHM" data-zh="02 结构监测">02 SHM</a>
-        <a href="#construction" data-en="03 Robotics" data-zh="03 智能建造">03 Robotics</a>
-        <a href="https://github.com/huashenglin97-glitch" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      </nav>
-
-      <div class="lang-switch" role="group" aria-label="Language switcher">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <span class="lang-sep" aria-hidden="true">/</span>
-        <button type="button" class="lang-btn" data-lang="zh">中文</button>
-      </div>
-    </div>
-  </header>
-
-  <main id="top" class="container">
-    <!-- Minimalist Intro / Vision -->
-    <section class="intro">
-      <p class="meta-line" data-en="Department of Civil Engineering · The University of British Columbia" data-zh="不列颠哥伦比亚大学（UBC）· 土木工程系">
-        Department of Civil Engineering · The University of British Columbia
-      </p>
-      <h1 data-en="Verifiable intelligence for how structures are designed, monitored, and built."
-          data-zh="面向建筑全周期的可验证工程智能：设计、监测与建造。">
-        Verifiable intelligence for how structures are designed, monitored, and built.
-      </h1>
-      <p class="intro-text"
-         data-en="This page is a high-level visual overview of our ongoing work — intentionally leaving out implementation details to focus on the problems we care about and the direction we are working toward: auditable code-based design, non-contact 3D structural sensing, and safety-aware autonomous construction."
-         data-zh="本页仅展示我们工作的核心愿景与概念图示，刻意隐去底层技术细节，聚焦于我们要解决的三个真实工程问题：可核验的规范设计智能、非接触式三维结构健康监测，以及安全可控的自主机器人建造。">
-        This page is a high-level visual overview of our ongoing work — intentionally leaving out implementation details to focus on the problems we care about and the direction we are working toward: auditable code-based design, non-contact 3D structural sensing, and safety-aware autonomous construction.
-      </p>
-
-      <!-- Quiet Overview Illustration: Design -> Build -> Monitor -->
-      <figure class="figure-box">
-        <svg class="diagram-svg" viewBox="0 0 880 186" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Overview of our three research directions across the building lifecycle">
-          <defs>
-            <marker id="arr-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#9CA3AF" />
-            </marker>
-          </defs>
-
-          <!-- 01 Design -->
-          <rect x="12" y="24" width="256" height="114" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="30" y="50" fill="#6B7280" font-size="11" font-weight="600" letter-spacing="0.06em" data-en="01 · DESIGN" data-zh="01 · 设计阶段">01 · DESIGN</text>
-          <text x="30" y="75" fill="#111827" font-size="14" font-weight="600" data-en="Regulatory Engineering Brain" data-zh="离线规范工程大脑">Regulatory Engineering Brain</text>
-          <text x="30" y="99" fill="#4B5563" font-size="11.5" data-en="Read real building codes, compute," data-zh="查阅真实建筑规范、工具验算、">Read real building codes, compute,</text>
-          <text x="30" y="117" fill="#4B5563" font-size="11.5" data-en="and verify every design step offline." data-zh="并在离线环境下逐项核验。">and verify every design step offline.</text>
-
-          <line x1="268" y1="81" x2="306" y2="81" stroke="#9CA3AF" stroke-width="1.3" marker-end="url(#arr-muted)" />
-
-          <!-- 02 Build -->
-          <rect x="312" y="24" width="256" height="114" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="330" y="50" fill="#6B7280" font-size="11" font-weight="600" letter-spacing="0.06em" data-en="02 · BUILD" data-zh="02 · 建造阶段">02 · BUILD</text>
-          <text x="330" y="75" fill="#111827" font-size="14" font-weight="600" data-en="Autonomous Construction" data-zh="自主机器人建造">Autonomous Construction</text>
-          <text x="330" y="99" fill="#4B5563" font-size="11.5" data-en="Plan heavy lifting, track progress," data-zh="自动规划吊装路径、追踪进度，">Plan heavy lifting, track progress,</text>
-          <text x="330" y="117" fill="#4B5563" font-size="11.5" data-en="and pause automatically for safety." data-zh="并在人员进入危险区时自动暂停。">and pause automatically for safety.</text>
-
-          <line x1="568" y1="81" x2="606" y2="81" stroke="#9CA3AF" stroke-width="1.3" marker-end="url(#arr-muted)" />
-
-          <!-- 03 Monitor -->
-          <rect x="612" y="24" width="256" height="114" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="630" y="50" fill="#6B7280" font-size="11" font-weight="600" letter-spacing="0.06em" data-en="03 · MONITOR" data-zh="03 · 监测阶段">03 · MONITOR</text>
-          <text x="630" y="75" fill="#111827" font-size="14" font-weight="600" data-en="Vision-Based 3D SHM" data-zh="视觉三维结构监测">Vision-Based 3D SHM</text>
-          <text x="630" y="99" fill="#4B5563" font-size="11.5" data-en="Track full-scale 3D building motion" data-zh="用多视角影像非接触追踪全楼层">Track full-scale 3D building motion</text>
-          <text x="630" y="117" fill="#4B5563" font-size="11.5" data-en="and torsion from multi-view video." data-zh="三维位移与扭转动态响应。">and torsion from multi-view video.</text>
-
-          <!-- Subtle feedback loop underneath -->
-          <path d="M 740 138 L 740 162 Q 740 170 732 170 L 148 170 Q 140 170 140 162 L 140 144" stroke="#CBD5E1" stroke-width="1.2" stroke-dasharray="4 4" fill="none" marker-end="url(#arr-muted)" />
-          <text x="440" y="164" text-anchor="middle" fill="#6B7280" font-size="10.5" data-en="Connecting paper standards, field robotics, and physical structural behavior" data-zh="打通纸面规范标准、现场机器人施工与建筑物理响应">Connecting paper standards, field robotics, and physical structural behavior</text>
-        </svg>
-      </figure>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Section 01: Regulatory Brain -->
-    <section id="codes" class="work-section">
-      <div class="section-head">
-        <span class="section-index">01</span>
+  <main class="page">
+    <!-- CV Header -->
+    <header class="cv-header">
+      <div class="cv-title-row">
         <div>
-          <h2 data-en="Offline Regulatory &amp; Structural Design Brain" data-zh="离线规范与结构设计大脑">Offline Regulatory &amp; Structural Design Brain</h2>
-          <p class="section-desc"
-             data-en="Engineering answers should never come from guesswork. We are exploring an offline workflow that reads real building codes clause by clause, delegates math and structural checks to dedicated tools, and enforces explicit verification before any answer or design is accepted."
-             data-zh="工程结论容不得凭空猜测。我们正在构建一套完全离线的规范智能工作流：逐条查阅真实建筑规范，将计算与结构校核交给专业工具，并在输出前由守卫机制强制核验每一项出处与数值。">
-            Engineering answers should never come from guesswork. We are exploring an offline workflow that reads real building codes clause by clause, delegates math and structural checks to dedicated tools, and enforces explicit verification before any answer or design is accepted.
+          <h1 data-en="Huasheng Lin" data-zh="林华盛">Huasheng Lin</h1>
+          <p class="affiliation"
+             data-en="Department of Civil Engineering, The University of British Columbia"
+             data-zh="不列颠哥伦比亚大学（UBC）· 土木工程系">
+            Department of Civil Engineering, The University of British Columbia
+          </p>
+          <p class="links-line">
+            <span>Vancouver, Canada</span>
+            <span class="dot" aria-hidden="true">·</span>
+            <a href="mailto:huasheng@student.ubc.ca">huasheng@student.ubc.ca</a>
+            <span class="dot" aria-hidden="true">·</span>
+            <a href="https://github.com/huashenglin97-glitch" target="_blank" rel="noopener noreferrer">GitHub</a>
           </p>
         </div>
-      </div>
 
-      <figure class="figure-box">
-        <svg class="diagram-svg" viewBox="0 0 880 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual illustration of the Offline Regulatory Brain">
-          <defs>
-            <marker id="arr-1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#6B7280" />
-            </marker>
-            <marker id="arr-warn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#B45309" />
-            </marker>
-          </defs>
-
-          <!-- 1 -->
-          <rect x="12" y="34" width="176" height="156" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="28" y="58" fill="#6B7280" font-size="11" font-weight="600" data-en="1 · CODE LIBRARY" data-zh="1 · 规范库">1 · CODE LIBRARY</text>
-          <text x="28" y="82" fill="#111827" font-size="13.5" font-weight="600" data-en="Building Codes" data-zh="真实建筑规范">Building Codes</text>
-          <text x="28" y="106" fill="#4B5563" font-size="11.5" data-en="Clauses, tables, and" data-zh="按条款、附表与附注">Clauses, tables, and</text>
-          <text x="28" y="124" fill="#4B5563" font-size="11.5" data-en="notes kept intact." data-zh="结构化离线存储。">notes kept intact.</text>
-          <text x="28" y="168" fill="#6B7280" font-size="10.5" data-en="Updated per code edition" data-zh="规范换版仅更新此步">Updated per code edition</text>
-
-          <line x1="188" y1="112" x2="220" y2="112" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-1)" />
-
-          <!-- 2 -->
-          <rect x="226" y="20" width="224" height="184" rx="10" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.2" />
-          <text x="244" y="44" fill="#1D4ED8" font-size="11" font-weight="600" data-en="2 · STEP-BY-STEP WORK" data-zh="2 · 分步作业">2 · STEP-BY-STEP WORK</text>
-          <rect x="244" y="60" width="188" height="36" rx="6" fill="#FFFFFF" stroke="#E5E7EB" />
-          <text x="338" y="82" text-anchor="middle" fill="#1F2937" font-size="11.5" font-weight="500" data-en="Browse &amp; read clauses" data-zh="查阅目录与规范原文">Browse &amp; read clauses</text>
-          <rect x="244" y="106" width="188" height="36" rx="6" fill="#FFFFFF" stroke="#E5E7EB" />
-          <text x="338" y="128" text-anchor="middle" fill="#1F2937" font-size="11.5" font-weight="500" data-en="Compute with tools" data-zh="调用计算工具，不心算">Compute with tools</text>
-          <rect x="244" y="152" width="188" height="36" rx="6" fill="#FFFFFF" stroke="#E5E7EB" />
-          <text x="338" y="174" text-anchor="middle" fill="#1F2937" font-size="11.5" font-weight="500" data-en="Check structural design" data-zh="联动专业结构校核">Check structural design</text>
-
-          <line x1="450" y1="112" x2="482" y2="112" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-1)" />
-
-          <!-- 3 -->
-          <rect x="488" y="34" width="172" height="156" rx="10" fill="#FFFDF5" stroke="#F59E0B" stroke-width="1.2" />
-          <text x="504" y="58" fill="#B45309" font-size="11" font-weight="600" data-en="3 · GUARD" data-zh="3 · 核验守卫">3 · GUARD</text>
-          <text x="504" y="82" fill="#111827" font-size="13.5" font-weight="600" data-en="Verification Gate" data-zh="强制把关">Verification Gate</text>
-          <text x="504" y="108" fill="#4B5563" font-size="11.5" data-en="· Clause actually read" data-zh="· 确认读过原文">· Clause actually read</text>
-          <text x="504" y="128" fill="#4B5563" font-size="11.5" data-en="· Value computed" data-zh="· 数值出自工具">· Value computed</text>
-          <text x="504" y="148" fill="#4B5563" font-size="11.5" data-en="· Constants traceable" data-zh="· 常数出处可查">· Constants traceable</text>
-
-          <!-- Return loop -->
-          <path d="M 574 190 L 574 226 Q 574 234 566 234 L 346 234 Q 338 234 338 226 L 338 210" stroke="#B45309" stroke-width="1.2" stroke-dasharray="4 4" fill="none" marker-end="url(#arr-warn)" />
-          <text x="456" y="226" text-anchor="middle" fill="#92400E" font-size="10.5" data-en="Sent back if unverified" data-zh="未通过核验则退回重做">Sent back if unverified</text>
-
-          <line x1="660" y1="112" x2="692" y2="112" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-1)" />
-
-          <!-- 4 -->
-          <rect x="698" y="34" width="170" height="156" rx="10" fill="#F6FEF9" stroke="#6EE7B7" stroke-width="1.2" />
-          <text x="714" y="58" fill="#047857" font-size="11" font-weight="600" data-en="4 · OUTPUT" data-zh="4 · 交付输出">4 · OUTPUT</text>
-          <text x="714" y="82" fill="#111827" font-size="13.5" font-weight="600" data-en="Auditable Result" data-zh="可审计结论">Auditable Result</text>
-          <text x="714" y="108" fill="#4B5563" font-size="11.5" data-en="Cited code answers" data-zh="附精确条款出处的">Cited code answers</text>
-          <text x="714" y="126" fill="#4B5563" font-size="11.5" data-en="and checked frame" data-zh="规范计算结果与">and checked frame</text>
-          <text x="714" y="144" fill="#4B5563" font-size="11.5" data-en="design proposals." data-zh="框架结构设计方案。">design proposals.</text>
-        </svg>
-        <figcaption data-en="Conceptual workflow — designed for offline deployment, edition updates, and full engineer auditability."
-                    data-zh="高层概念流程：面向离线环境部署、规范版本迭代与工程师可审计性。">
-          Conceptual workflow — designed for offline deployment, edition updates, and full engineer auditability.
-        </figcaption>
-      </figure>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- Section 02: Vision-Based SHM -->
-    <section id="shm" class="work-section">
-      <div class="section-head">
-        <span class="section-index">02</span>
-        <div>
-          <h2 data-en="Vision-Based Structural Health Monitoring (SHM)" data-zh="基于视觉的三维结构健康监测（SHM）">Vision-Based Structural Health Monitoring (SHM)</h2>
-          <p class="section-desc"
-             data-en="Conventional structural monitoring relies on dense wired sensors at sparse points. We are developing non-contact, multi-view 3D tracking to capture full-field floor translation and torsion of large-scale structures under seismic excitation."
-             data-zh="传统结构监测依赖昂贵且测点稀疏的有线传感器。我们正在探索多视角非接触三维追踪，在大型振动台抗震试验中同步捕捉建筑各楼层的三维平动位移与扭转响应。">
-            Conventional structural monitoring relies on dense wired sensors at sparse points. We are developing non-contact, multi-view 3D tracking to capture full-field floor translation and torsion of large-scale structures under seismic excitation.
-          </p>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <span class="sep">/</span>
+          <button type="button" class="lang-btn" data-lang="zh">中文</button>
         </div>
       </div>
+    </header>
 
-      <!-- Real Shake Table Demo Video -->
-      <figure class="figure-box media-box">
-        <div class="video-wrap">
+    <!-- Research Focus -->
+    <section class="cv-section">
+      <h2 data-en="Research Focus" data-zh="研究方向">Research Focus</h2>
+      <p data-en="My work focuses on trustworthy, physically grounded intelligence for civil and structural engineering — connecting how buildings are designed against real codes, how they are built by autonomous machinery, and how they respond under extreme loads."
+         data-zh="我的研究聚焦于面向土木与结构工程的可验证智能，关注建筑全生命周期中的三个核心环节：基于真实规范的可审计设计、安全可控的自主机器人建造，以及非接触式三维结构健康监测。">
+        My work focuses on trustworthy, physically grounded intelligence for civil and structural engineering — connecting how buildings are designed against real codes, how they are built by autonomous machinery, and how they respond under extreme loads.
+      </p>
+
+      <!-- Minimal monochrome lifecycle line -->
+      <svg class="inline-diagram" viewBox="0 0 680 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Design, Build, and Monitor lifecycle">
+        <text x="0" y="22" fill="#111111" font-size="12.5" font-weight="600" data-en="01  Design" data-zh="01  规范设计">01  Design</text>
+        <text x="0" y="42" fill="#6B7280" font-size="11.5" data-en="Offline code reasoning &amp; verification" data-zh="离线规范推理与核验">Offline code reasoning &amp; verification</text>
+
+        <line x1="202" y1="28" x2="230" y2="28" stroke="#9CA3AF" stroke-width="1" />
+        <path d="M 226 24.5 L 231 28 L 226 31.5" stroke="#9CA3AF" stroke-width="1" fill="none" />
+
+        <text x="248" y="22" fill="#111111" font-size="12.5" font-weight="600" data-en="02  Build" data-zh="02  智能建造">02  Build</text>
+        <text x="248" y="42" fill="#6B7280" font-size="11.5" data-en="Autonomous crane &amp; site safety" data-zh="自主吊装与安全避让">Autonomous crane &amp; site safety</text>
+
+        <line x1="444" y1="28" x2="472" y2="28" stroke="#9CA3AF" stroke-width="1" />
+        <path d="M 468 24.5 L 473 28 L 468 31.5" stroke="#9CA3AF" stroke-width="1" fill="none" />
+
+        <text x="490" y="22" fill="#111111" font-size="12.5" font-weight="600" data-en="03  Monitor" data-zh="03  结构监测">03  Monitor</text>
+        <text x="490" y="42" fill="#6B7280" font-size="11.5" data-en="Multi-view 3D structural sensing" data-zh="多视角三维位移与扭转感知">Multi-view 3D structural sensing</text>
+      </svg>
+    </section>
+
+    <!-- Selected Work -->
+    <section class="cv-section">
+      <h2 data-en="Selected Work" data-zh="代表工作">Selected Work</h2>
+
+      <!-- Item 1 -->
+      <article class="cv-item">
+        <div class="item-head">
+          <h3 data-en="Offline Regulatory &amp; Structural Design Brain" data-zh="离线规范与结构设计智能">Offline Regulatory &amp; Structural Design Brain</h3>
+          <span class="item-tag" data-en="Ongoing" data-zh="进行中">Ongoing</span>
+        </div>
+        <p data-en="Developing an offline engineering assistant that navigates building codes step by step, delegates calculations and structural checks to dedicated tools, and enforces explicit verification before producing cited answers or frame design proposals."
+           data-zh="构建完全离线运行的工程规范智能体：按步骤查阅真实建筑规范、调用专业计算与结构校核工具，并在输出前强制核验每一项条款出处与数值，形成可审计的工程结论与框架设计方案。">
+          Developing an offline engineering assistant that navigates building codes step by step, delegates calculations and structural checks to dedicated tools, and enforces explicit verification before producing cited answers or frame design proposals.
+        </p>
+        <svg class="flow-strip" viewBox="0 0 680 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regulatory brain conceptual flow">
+          <text x="0" y="21" fill="#374151" font-size="12" data-en="Building Codes" data-zh="真实建筑规范">Building Codes</text>
+          <text x="108" y="21" fill="#9CA3AF" font-size="12">→</text>
+          <text x="132" y="21" fill="#374151" font-size="12" data-en="Clause Lookup &amp; Tool Computation" data-zh="分步查条款与工具计算">Clause Lookup &amp; Tool Computation</text>
+          <text x="348" y="21" fill="#9CA3AF" font-size="12">→</text>
+          <text x="372" y="21" fill="#374151" font-size="12" data-en="Verification Guard" data-zh="核验把关">Verification Guard</text>
+          <text x="498" y="21" fill="#9CA3AF" font-size="12">→</text>
+          <text x="522" y="21" fill="#111111" font-size="12" font-weight="600" data-en="Auditable Design" data-zh="可审计交付">Auditable Design</text>
+        </svg>
+      </article>
+
+      <!-- Item 2: SHM with real video -->
+      <article class="cv-item">
+        <div class="item-head">
+          <h3 data-en="3D Multi-View Tracking for Structural Health Monitoring (SHM)" data-zh="面向结构健康监测（SHM）的多视角三维追踪">3D Multi-View Tracking for Structural Health Monitoring (SHM)</h3>
+          <span class="item-tag" data-en="Ongoing" data-zh="进行中">Ongoing</span>
+        </div>
+        <p data-en="Non-contact multi-view 3D vision for large-scale shake table testing — tracking full-story translation (X, Y, Z) and floor torsion (rz) continuously under seismic shaking without dense wired sensor arrays."
+           data-zh="面向大型抗震振动台试验的非接触式多视角三维结构追踪：无需密集有线传感器，同步捕捉建筑各楼层在地震作用下的三向平动位移（X、Y、Z）与扭转响应（rz）。">
+          Non-contact multi-view 3D vision for large-scale shake table testing — tracking full-story translation (X, Y, Z) and floor torsion (rz) continuously under seismic shaking without dense wired sensor arrays.
+        </p>
+
+        <figure class="media-figure">
           <video
             controls
             autoplay
@@ -197,152 +114,46 @@
             <source src="assets/shm_4floor_tracking.mp4" type="video/mp4" />
             Your browser does not support HTML5 video.
           </video>
+          <figcaption data-en="Large shake table test: synchronized SE, SW, and South camera views with Floor 4 X/Y/Z displacement (mm) and torsion rz (mrad)."
+                      data-zh="大型振动台实测演示：东南、西南、正南三视角三维追踪与第 4 层 X/Y/Z 位移（mm）及扭转 rz（mrad）同步曲线。">
+            Large shake table test: synchronized SE, SW, and South camera views with Floor 4 X/Y/Z displacement (mm) and torsion rz (mrad).
+          </figcaption>
+        </figure>
+      </article>
+
+      <!-- Item 3: Autonomous Construction -->
+      <article class="cv-item">
+        <div class="item-head">
+          <h3 data-en="Autonomous Robotic Construction &amp; Site Safety" data-zh="自主机器人建造与现场安全协同">Autonomous Robotic Construction &amp; Site Safety</h3>
+          <span class="item-tag">2026</span>
         </div>
-        <figcaption data-en="3D Multi-View Tracking of Large Shake Table Testing — synchronized SE, SW, and South views alongside Floor 4 X/Y/Z displacement (mm) and torsion rz (mrad)."
-                    data-zh="大型振动台试验多视角三维追踪实测演示：东南、西南、正南三视角同步锁定楼层骨架，并实时输出第 4 层 X/Y/Z 位移（mm）与扭转 rz（mrad）。">
-          3D Multi-View Tracking of Large Shake Table Testing — synchronized SE, SW, and South views alongside Floor 4 X/Y/Z displacement (mm) and torsion rz (mrad).
-        </figcaption>
-      </figure>
-
-      <!-- Minimalist SHM Concept Illustration -->
-      <figure class="figure-box">
-        <svg class="diagram-svg" viewBox="0 0 880 184" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual illustration of Vision-Based Structural Health Monitoring">
-          <defs>
-            <marker id="arr-2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#6B7280" />
-            </marker>
-          </defs>
-
-          <!-- 1 -->
-          <rect x="12" y="20" width="194" height="144" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="28" y="44" fill="#6B7280" font-size="11" font-weight="600" data-en="1 · CAPTURE" data-zh="1 · 多视角采集">1 · CAPTURE</text>
-          <text x="28" y="68" fill="#111827" font-size="13.5" font-weight="600" data-en="Multi-View Cameras" data-zh="多视角同步影像">Multi-View Cameras</text>
-          <text x="28" y="94" fill="#4B5563" font-size="11.5" data-en="Observe the full building" data-zh="从多个方位非接触观测">Observe the full building</text>
-          <text x="28" y="112" fill="#4B5563" font-size="11.5" data-en="without wired sensors." data-zh="整栋建筑，无需密集布线。">without wired sensors.</text>
-
-          <line x1="206" y1="92" x2="234" y2="92" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-2)" />
-
-          <!-- 2 -->
-          <rect x="240" y="20" width="194" height="144" rx="10" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.2" />
-          <text x="256" y="44" fill="#1D4ED8" font-size="11" font-weight="600" data-en="2 · TRACK" data-zh="2 · 三维追踪">2 · TRACK</text>
-          <text x="256" y="68" fill="#111827" font-size="13.5" font-weight="600" data-en="Full-Field 3D Motion" data-zh="全楼层三维运动">Full-Field 3D Motion</text>
-          <text x="256" y="94" fill="#4B5563" font-size="11.5" data-en="Lock onto every floor" data-zh="在强震大变形下持续">Lock onto every floor</text>
-          <text x="256" y="112" fill="#4B5563" font-size="11.5" data-en="through intense shaking." data-zh="锁定每一层的空间姿态。">through intense shaking.</text>
-
-          <line x1="434" y1="92" x2="462" y2="92" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-2)" />
-
-          <!-- 3 -->
-          <rect x="468" y="20" width="194" height="144" rx="10" fill="#FFFDF5" stroke="#F59E0B" stroke-width="1.2" />
-          <text x="484" y="44" fill="#B45309" font-size="11" font-weight="600" data-en="3 · MEASURE" data-zh="3 · 定量反演">3 · MEASURE</text>
-          <text x="484" y="68" fill="#111827" font-size="13.5" font-weight="600" data-en="6-DOF Floor History" data-zh="楼层位移与扭转">6-DOF Floor History</text>
-          <text x="484" y="94" fill="#4B5563" font-size="11.5" data-en="Reconstruct X, Y, Z" data-zh="同步输出各层三向位移">Reconstruct X, Y, Z</text>
-          <text x="484" y="112" fill="#4B5563" font-size="11.5" data-en="displacement &amp; torsion." data-zh="（mm）与扭转角（mrad）。">displacement &amp; torsion.</text>
-
-          <line x1="662" y1="92" x2="690" y2="92" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-2)" />
-
-          <!-- 4 -->
-          <rect x="696" y="20" width="172" height="144" rx="10" fill="#F6FEF9" stroke="#6EE7B7" stroke-width="1.2" />
-          <text x="712" y="44" fill="#047857" font-size="11" font-weight="600" data-en="4 · INSIGHT" data-zh="4 · 健康评估">4 · INSIGHT</text>
-          <text x="712" y="68" fill="#111827" font-size="13.5" font-weight="600" data-en="Structural Health" data-zh="结构安全洞察">Structural Health</text>
-          <text x="712" y="94" fill="#4B5563" font-size="11.5" data-en="Drift, torsion, and" data-zh="层间位移角、扭转评估">Drift, torsion, and</text>
-          <text x="712" y="112" fill="#4B5563" font-size="11.5" data-en="post-event assessment." data-zh="与震后状态诊断。">post-event assessment.</text>
-        </svg>
-        <figcaption data-en="Vision-based SHM concept — bridging large-scale seismic experiments and real-world structural digital twins."
-                    data-zh="视觉结构健康监测概念图：连接大型抗震物理试验与真实建筑数字孪生。">
-          Vision-based SHM concept — bridging large-scale seismic experiments and real-world structural digital twins.
-        </figcaption>
-      </figure>
+        <p data-en="Integrating autonomous lifting path planning with visual site understanding on a full-scale robotized mobile crane — enabling obstacle-aware retaining wall construction, automated progress updates, and automatic safety pausing when workers enter active zones."
+           data-zh="在全尺寸机器人化移动起重机上融合自主避障路径规划与现场视觉感知，实现挡土墙构件自主吊装、施工进度自动汇报，并在人员进入危险作业区时自动暂停，保留人工随时接管权。">
+          Integrating autonomous lifting path planning with visual site understanding on a full-scale robotized mobile crane — enabling obstacle-aware retaining wall construction, automated progress updates, and automatic safety pausing when workers enter active zones.
+        </p>
+      </article>
     </section>
 
-    <hr class="divider" />
-
-    <!-- Section 03: Autonomous Construction & Site Safety -->
-    <section id="construction" class="work-section">
-      <div class="section-head">
-        <span class="section-index">03</span>
-        <div>
-          <h2 data-en="Autonomous Robotic Construction &amp; Site Safety" data-zh="自主机器人建造与现场安全协同">Autonomous Robotic Construction &amp; Site Safety</h2>
-          <p class="section-desc"
-             data-en="To address skilled labor shortages and hazardous heavy lifting on construction sites, we integrate autonomous path planning with visual site understanding on a full-scale robotized mobile crane — enabling obstacle-aware construction, live progress reporting, and automatic pausing whenever workers enter active zones."
-             data-zh="面对建筑行业劳动力短缺与高危重型吊装难题，我们将自主路径规划与现场视觉理解结合到全尺寸机器人化移动起重机上：实现避障吊装、施工进度自动汇报，并在工人进入作业危险区时自动暂停，始终保留人工接管权。">
-            To address skilled labor shortages and hazardous heavy lifting on construction sites, we integrate autonomous path planning with visual site understanding on a full-scale robotized mobile crane — enabling obstacle-aware construction, live progress reporting, and automatic pausing whenever workers enter active zones.
-          </p>
-        </div>
-      </div>
-
-      <!-- Minimalist Autonomous Construction Concept Illustration -->
-      <figure class="figure-box">
-        <svg class="diagram-svg" viewBox="0 0 880 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual illustration of Autonomous Robotic Construction and Site Safety">
-          <defs>
-            <marker id="arr-3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#6B7280" />
-            </marker>
-            <marker id="arr-safe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" fill="#B45309" />
-            </marker>
-          </defs>
-
-          <!-- 1: Site Perception -->
-          <rect x="12" y="24" width="194" height="150" rx="10" fill="#FAFAFA" stroke="#D1D5DB" stroke-width="1.2" />
-          <text x="28" y="48" fill="#6B7280" font-size="11" font-weight="600" data-en="1 · PERCEIVE" data-zh="1 · 现场感知">1 · PERCEIVE</text>
-          <text x="28" y="72" fill="#111827" font-size="13.5" font-weight="600" data-en="Site Understanding" data-zh="施工环境理解">Site Understanding</text>
-          <text x="28" y="98" fill="#4B5563" font-size="11.5" data-en="Track heavy blocks," data-zh="实时识别吊装构件、">Track heavy blocks,</text>
-          <text x="28" y="116" fill="#4B5563" font-size="11.5" data-en="obstacles, targets," data-zh="障碍物、目标位置">obstacles, targets,</text>
-          <text x="28" y="134" fill="#4B5563" font-size="11.5" data-en="and nearby workers." data-zh="与周边作业人员。">and nearby workers.</text>
-
-          <line x1="206" y1="99" x2="234" y2="99" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-3)" />
-
-          <!-- 2: Autonomous Planning -->
-          <rect x="240" y="24" width="194" height="150" rx="10" fill="#F8FAFC" stroke="#93C5FD" stroke-width="1.2" />
-          <text x="256" y="48" fill="#1D4ED8" font-size="11" font-weight="600" data-en="2 · PLAN" data-zh="2 · 自主规划">2 · PLAN</text>
-          <text x="256" y="72" fill="#111827" font-size="13.5" font-weight="600" data-en="Obstacle-Aware Lifting" data-zh="避障吊装规划">Obstacle-Aware Lifting</text>
-          <text x="256" y="98" fill="#4B5563" font-size="11.5" data-en="Plan 3D crane paths" data-zh="自动生成三维避障">Plan 3D crane paths</text>
-          <text x="256" y="116" fill="#4B5563" font-size="11.5" data-en="for heavy modular" data-zh="吊装轨迹，完成重型">for heavy modular</text>
-          <text x="256" y="134" fill="#4B5563" font-size="11.5" data-en="block placement." data-zh="混凝土砌块精准就位。">block placement.</text>
-
-          <line x1="434" y1="99" x2="462" y2="99" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-3)" />
-
-          <!-- 3: Safety & Human-in-the-Loop -->
-          <rect x="468" y="24" width="194" height="150" rx="10" fill="#FFFDF5" stroke="#F59E0B" stroke-width="1.2" />
-          <text x="484" y="48" fill="#B45309" font-size="11" font-weight="600" data-en="3 · SAFEGUARD" data-zh="3 · 安全门控">3 · SAFEGUARD</text>
-          <text x="484" y="72" fill="#111827" font-size="13.5" font-weight="600" data-en="Active Safety Pause" data-zh="主动安全避让">Active Safety Pause</text>
-          <text x="484" y="98" fill="#4B5563" font-size="11.5" data-en="Pause automatically" data-zh="工人进入危险区时">Pause automatically</text>
-          <text x="484" y="116" fill="#4B5563" font-size="11.5" data-en="when workers enter;" data-zh="自动暂停，并随时保留">when workers enter;</text>
-          <text x="484" y="134" fill="#4B5563" font-size="11.5" data-en="human operator override." data-zh="专业操作员人工接管。">human operator override.</text>
-
-          <line x1="662" y1="99" x2="690" y2="99" stroke="#6B7280" stroke-width="1.3" marker-end="url(#arr-3)" />
-
-          <!-- 4: Execution & Progress -->
-          <rect x="696" y="24" width="172" height="150" rx="10" fill="#F6FEF9" stroke="#6EE7B7" stroke-width="1.2" />
-          <text x="712" y="48" fill="#047857" font-size="11" font-weight="600" data-en="4 · EXECUTE" data-zh="4 · 执行与汇报">4 · EXECUTE</text>
-          <text x="712" y="72" fill="#111827" font-size="13.5" font-weight="600" data-en="Full-Scale Build" data-zh="全尺寸施工与汇报">Full-Scale Build</text>
-          <text x="712" y="98" fill="#4B5563" font-size="11.5" data-en="Validated on full-scale" data-zh="在全尺寸挡土墙试验中">Validated on full-scale</text>
-          <text x="712" y="116" fill="#4B5563" font-size="11.5" data-en="retaining walls with live" data-zh="验证，同步自动生成">retaining walls with live</text>
-          <text x="712" y="134" fill="#4B5563" font-size="11.5" data-en="progress reports." data-zh="实时施工进度报告。">progress reports.</text>
-
-          <!-- Safety feedback line -->
-          <path d="M 565 174 L 565 212 Q 565 220 557 220 L 345 220 Q 337 220 337 212 L 337 180" stroke="#B45309" stroke-width="1.2" stroke-dasharray="4 4" fill="none" marker-end="url(#arr-safe)" />
-          <text x="451" y="212" text-anchor="middle" fill="#92400E" font-size="10.5" data-en="Safety signal suspends &amp; resumes crane motion" data-zh="安全信号实时控制作业暂停与恢复">Safety signal suspends &amp; resumes crane motion</text>
-        </svg>
-        <figcaption data-en="Autonomous construction vision — reducing worker exposure to hazardous heavy lifting while keeping human operators in control."
-                    data-zh="自主建造愿景：降低工人暴露于高危重型吊装作业的风险，同时确保人类操作员始终掌握最终控制权。">
-          Autonomous construction vision — reducing worker exposure to hazardous heavy lifting while keeping human operators in control.
-        </figcaption>
-      </figure>
-
-      <p class="pub-note">
-        <span class="pub-label" data-en="Related Publication" data-zh="相关论文">Related Publication</span>
-        Y. Xiao, <strong>H. Lin</strong>, T.Y. Yang — <em>"Large language model and reinforcement learning based autonomous construction and progress updates,"</em> ACDSA 2026.
-      </p>
+    <!-- Publications -->
+    <section class="cv-section">
+      <h2 data-en="Selected Publications" data-zh="论文发表">Selected Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-year">2026</span>
+          <div class="pub-body">
+            Y. Xiao, <strong>H. Lin</strong>, T.Y. Yang.
+            <em>Large language model and reinforcement learning based autonomous construction and progress updates.</em>
+            Proc. of International Conference on Artificial Intelligence, Computer, Data Sciences and Applications (ACDSA 2026).
+          </div>
+        </li>
+      </ul>
     </section>
+
+    <footer class="cv-footer">
+      <span data-en="Huasheng Lin · UBC Civil Engineering" data-zh="林华盛 · UBC 土木工程系">Huasheng Lin · UBC Civil Engineering</span>
+      <span data-en="Updated 2026" data-zh="更新于 2026">Updated 2026</span>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span data-en="Huasheng Lin · Civil Engineering, UBC" data-zh="林华盛 · 不列颠哥伦比亚大学土木工程系">Huasheng Lin · Civil Engineering, UBC</span>
-      <a href="https://github.com/huashenglin97-glitch" target="_blank" rel="noopener noreferrer">github.com/huashenglin97-glitch</a>
-    </div>
-  </footer>
 
   <script src="app.js"></script>
 </body>
